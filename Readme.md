@@ -13,28 +13,11 @@ or include it in `package.json`
 
 ## Usage
 
-mongoose-migrate needs an env variable `NODE_MONGOOSE_MIGRATIONS_CONFIG` which points to the path of the config file. The config file should contain
-
-```js
-// Path : ./config/migrations.js
-{
-  "development": {
-    "schema": { "migration": {} },
-    "modelName": "Migration",
-    "db": "mongodb://localhost/db_development"
-  },
-  "test": { ... },
-  "production": { ... }
-}
-```
-
-and then run the migrate command
+mongoose-migrate needs an env variable `MONGOHQ_URL` which is provided by the MongoHQ Heroku Addon
 
 ```sh
-$ NODE_MONGOOSE_MIGRATIONS_CONFIG=./config/migrations.js mongoose-migrate
+$ mongoose-migrate
 ```
-
-I created this fork because everytime I used to deploy to heroku, it used to deploy in a different folder and the `.migrate` file was not available anymore.
 
 ---
 

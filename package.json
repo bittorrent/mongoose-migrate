@@ -1,5 +1,5 @@
 {
-    "name": "mongoose-migrate"
+    "name": "mongoose-migrate-mongohq"
   , "version": "0.1.5"
   , "description": "Abstract migration framework for node"
   , "keywords": ["migrate", "migrations", "mongoose"]
